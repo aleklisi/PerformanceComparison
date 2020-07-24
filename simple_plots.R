@@ -16,11 +16,13 @@ hist(scrum_time_fast, add=T, col="blue")
 
 library("ggpubr")
 
-ggboxplot(first_and_second_erlang_runs, x = "test", y = "time", 
+ggboxplot(first_and_second_erlang_runs, x = "test", y = "time",
+          main = "Erlang fast scrum implementation first and second run comaprison",
           color = "test", palette = c("#00AFBB", "#E7B800"),
-          ylab = "Test", xlab = "Time")
+          ylab = "Time", xlab = "Test")
 
 
 ggboxplot(erlang_and_c_runs, x = "test", y = "time", 
+          main = "C and Erlang fast scrum implementation comaprison",
           color = "test", palette = c("#00AFBB", "#E7B800"),
-          ylab = "Test", xlab = "Time")
+          ylab = "Time", xlab = "Test")
