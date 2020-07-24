@@ -1,33 +1,37 @@
 # Performance Comparison
 
-This is a tutorial project which is demonstrating how to compare:
- - the performance of load tests,
- - two implementations,
- - two runs of the same tests.
+This is a project tutorial, aiming to demonstrate how to compare:
+- the performance of load tests
+- two different implementations of the same algorithm
+- two runs of the same tests
 
 ## The story
 
-The story is that there are 2 implementations of scrum sha_,
+The effort started with two different implementations of the SCRAM algorithm,
 one in Erlang and one in C.
-Random binaries were generated and hashed 100 times for the C implementation,
-and 2 runs for 100 runs of Erlang implementation.
-What I want to know is whether the 3 runs are significantly different or relatively the same.
+Random salts and passwords were generated and given to SCRAM,
+one run of a hundred passes for the C implementation,
+and 2 runs of a hundred passes for the Erlang one.
+What we want is to first compare the two different implementations, therefore needing runs of each,
+and then we want to analyse the predictability of the Erlang one, hence having two different runs of
+the same implementation.
 
 ## Loading the data
 
-The example data (from the actual runs) is in the `/data`.
-These are the execution times in microseconds. separated by `\n` new line chars.
-
+The example data (from the actual runs) is in the `data/` directory.
+These are the execution times in microseconds, separated by `\n` new line chars.
 
 To load the data and group it into data frames see `load_data.R`.
 
 ## Basic summary
 
-To display the basic summary run `basic_data_summary.R`. It displays a number of samples, mean, and standard divination for each of the types of test runs.
+To display the basic summary run `basic_data_summary.R`.
+It displays a number of samples, mean, and standard deviation for each type of test ran.
 
 ## Basic plots
 
-To see how the data is distributed run `simple_plots.R`. It contains histograms and box plots examples.
+To see how the data is distributed run `simple_plots.R`.
+It contains histograms and box plots examples.
 
 ## Statistical tests
 
